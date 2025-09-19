@@ -1,5 +1,7 @@
 package com.darkorss.LiftGo.controller;
 
+import com.darkorss.LiftGo.mapper.IClientMapper;
+import com.darkorss.LiftGo.model.dto.ClientsDto;
 import com.darkorss.LiftGo.model.entity.Clients;
 import com.darkorss.LiftGo.service.IClientsService;
 import lombok.AllArgsConstructor;
@@ -16,10 +18,11 @@ import static org.springframework.http.HttpStatus.OK;
 public class ClientsController {
     @Autowired
     private final IClientsService clientsService;
+    private final IClientMapper clientMapper;
 
     @GetMapping("/{mail}")
-    public ResponseEntity<Clients>  getClient(@PathVariable String mail) {
-        Clients client = clientsService.findByEmail(mail);
+    public ResponseEntity<ClientsDto>  getClient(@PathVariable String mail) {
+        ClientsDto client = clientMapper.toDto(clientsService.findByEmail(mail)); // clientsService.findByEmail(mail);
         return new ResponseEntity<>(client, OK);
     }
 
