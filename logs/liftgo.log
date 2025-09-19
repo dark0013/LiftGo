@@ -1,0 +1,4 @@
+2025-09-19 00:34:42 [http-nio-9595-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-19 00:34:42 [http-nio-9595-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-09-19 00:34:42 [http-nio-9595-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-09-19 00:34:42 [http-nio-9595-exec-2] INFO  c.d.L.controller.ClientsController - Buscando cliente con email: alain@example.com
